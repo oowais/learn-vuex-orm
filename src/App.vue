@@ -15,6 +15,7 @@ export default {
   components: {
     UserProfile,
   },
+
   data() {
     return {
       form: {
@@ -22,11 +23,13 @@ export default {
       },
     };
   },
+
   computed: {
     items() {
       return Item.all();
     },
   },
+  
   methods: {
     addItem() {
       Item.insert({ data: this.form });
